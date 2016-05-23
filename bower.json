@@ -1,0 +1,13 @@
+{
+  "name" : "h5p-image-hotspot",
+  "version" : "1.0.0",
+  "main" : [
+    "index.js",
+    "index.css"
+  ],
+  "dependencies": {
+    "react" : "~15.0.1",
+    "pie-react-support" : "1.0.0",
+    "font-awesome" : "~4.6.2"
+  }
+}
