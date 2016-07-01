@@ -1,0 +1,28 @@
+{
+  "components" : [
+    {
+      "id" : "1",
+      "component" : {
+        "name" : "h5p-image-hotspot",
+        "version" : "1.0.0"
+      },
+      "correctResponse": {
+        "topLeft": {
+          "x": 834,
+          "y": 51
+        },
+        "bottomRight": {
+          "x": 1027,
+          "y": 235
+        }
+      },
+      "model": {
+        "src": "./berries.jpg",
+        "feedback": {
+          "correct": "Correct! Cherries are named after the Turkish town of Cerasus.",
+          "incorrect": "Incorrect - the answer was Cherries"
+        }
+      }
+    }
+  ] 
+}
