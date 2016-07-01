@@ -7,7 +7,7 @@
   ],
   "dependencies": {
     "react" : "~15.0.1",
-    "pie-react-support" : "git@bitbucket.org:pielibs/pie-react-support.git",
-    "font-awesome" : "~4.6.2"
+    "font-awesome" : "~4.6.2",
+    "pie-react-support" : "git@bitbucket.org:pielibs/pie-react-support.git"
   }
 }
