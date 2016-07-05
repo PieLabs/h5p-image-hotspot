@@ -9,5 +9,11 @@
     "react" : "~15.0.1",
     "font-awesome" : "~4.6.2",
     "pie-react-support" : "git@bitbucket.org:pielibs/pie-react-support.git"
+  },
+
+  "overrides" : {
+    "font-awesome" : {
+      "main" : ["css/font-awesome.css"]
+    }
   }
 }
