@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+rm -fr dist
+echo "jsx -> js bundle"
+webpack
+
+echo "css"
+cp src/*.css dist/

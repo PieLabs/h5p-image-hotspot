@@ -2,15 +2,14 @@
   "name" : "h5p-image-hotspot",
   "version" : "1.0.0",
   "main" : [
-    "index.js",
-    "index.css"
+    "dist/index.js",
+    "dist/index.css"
   ],
   "dependencies": {
     "react" : "~15.0.1",
     "font-awesome" : "~4.6.2",
     "pie-react-support" : "git@github.com:PieLabs/pie-react-support.git"
   },
-
   "overrides" : {
     "font-awesome" : {
       "main" : ["css/font-awesome.css"]

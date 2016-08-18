@@ -1,0 +1,8 @@
+{
+  "name": "tmp-bower-config",
+  "version": "1.0.0",
+  "dependencies": {
+    "h5p-image-hotspot": "/Users/edeustace/dev/github/PieLabs/h5p-image-hotspot",
+    "control-panel": "git@bitbucket.org:pielibs/control-panel.git"
+  }
+}
