@@ -1,5 +1,6 @@
-A [Port of a H5P component](https://h5p.org/image-hotspot-question).
-Build w/ pie's React support.
+A [Port of a H5P component](https://h5p.org/image-hotspot-question) as a proof of concept.
+
+Built w/ pie's React support.
 
 ## Build 
 
