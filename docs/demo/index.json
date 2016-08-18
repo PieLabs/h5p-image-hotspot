@@ -17,6 +17,7 @@
         }
       },
       "model": {
+        "stem" : "Which one of these berries is named after a town in Turkey?",
         "src": "./berries.jpg",
         "feedback": {
           "correct": "Correct! Cherries are named after the Turkish town of Cerasus.",

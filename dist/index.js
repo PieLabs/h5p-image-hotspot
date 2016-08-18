@@ -92,19 +92,13 @@
 	  },
 	  render: function render() {
 
-	    console.log('render:', this.props.model);
-
 	    return _react2.default.createElement(
 	      'div',
 	      { className: 'h5p-image-hotspot-question' },
 	      _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'a',
-	          { 'class': 'info-link', target: '_blank', href: 'https://h5p.org/image-hotspot-question' },
-	          'port of h5p component'
-	        )
+	        'span',
+	        { className: 'stem' },
+	        this.props.model.stem
 	      ),
 	      _react2.default.createElement(
 	        'div',

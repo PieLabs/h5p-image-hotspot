@@ -18,10 +18,8 @@ var H5pImageHotspot = React.createClass({
   },
   render: function () {
 
-    console.log('render:', this.props.model); 
-
     return <div className="h5p-image-hotspot-question">
-      <div><a class="info-link" target="_blank" href="https://h5p.org/image-hotspot-question">port of h5p component</a></div>
+      <span className="stem">{this.props.model.stem}</span>
       <div className="image-wrapper" onClick={this.onImageClick}>
         <img className="hotspot-image" src={this.props.model.src}></img>
         <HotspotFeedback 

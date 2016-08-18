@@ -1,4 +1,18 @@
 /* Transparent background color is a IE10 hack to get click event*/
+
+.h5p-image-hotspot-question {
+  border: 1px solid #EEE;
+  border-radius: 6px;
+}
+
+.h5p-image-hotspot-question .stem{
+  padding: 10px;
+  position: relative;
+  display: inline-block;
+  color: #555;
+  font-size: 18px;
+}
+
 .h5p-image-hotspot-question .image-hotspot {
   position: absolute;
   background-color: rgba(0,0,0,0);
@@ -11,8 +25,6 @@
 .h5p-image-hotspot-question .image-wrapper {
   display: inline-block;
   position: relative;
-  overflow: hidden;
-  height: 100%;
 }
 
 .h5p-image-hotspot-question .h5peditor .file img {
