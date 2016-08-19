@@ -14,5 +14,7 @@ exports.model = function(question, session, env){
     out.correct = xOk && yOk;
     out.feedback = question.model.feedback[out.correct ? 'correct' : 'incorrect'];
   }
+
+  console.log('out:', JSON.stringify(out));
   return out;
 }

@@ -13,9 +13,8 @@
   font-size: 18px;
 }
 
-.h5p-image-hotspot-question .image-hotspot {
-  position: absolute;
-  background-color: rgba(0,0,0,0);
+.h5p-image-hotspot-question .hotspot-image{
+  cursor:pointer;
 }
 
 .h5p-image-hotspot-question .image-hotspot.circle {
@@ -79,8 +78,24 @@
 }
 
 .h5p-image-hotspot-question .hotspot-feedback-text {
-  color: darkcyan;
-  font-size: 17px;
+  color: white;
+  background: lightblue;
+  border-radius: 5px;
+  box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.5);
+  font-size: 12px;
+  position: absolute;
+  padding: 10px;
+  z-index: 1;
+}
+
+.h5p-image-hotspot-question .hotspot-feedback-text.correct {
+  color: #39692e;
+  background: #d1e2ce;
+}
+
+.h5p-image-hotspot-question .hotspot-feedback-text.incorrect {
+  color: red;
+  background: pink;
 }
 
 /* Feedback circles */
@@ -94,16 +109,17 @@
   color: orange;
   font-size: 16px;
   visibility: hidden;
+  z-index: 2;
+}
+
+.h5p-image-hotspot-question .hotspot-feedback.disabled{
+  color: #ffffff;
+  background: #bbbbbb;
 }
 
 .h5p-image-hotspot-question .hotspot-feedback.incorrect {
   background: lightpink;
   color: red;
-}
-
-.h5p-image-hotspot-question .hotspot-feedback.disabled{
-  color: #444444;
-  background: #888888;
 }
 
   /*content: "\f00d";*/
@@ -139,7 +155,8 @@
 }
 
 /* Hotspot feedback animation*/
-.h5p-image-hotspot-question .hotspot-feedback.fade-in{
+.h5p-image-hotspot-question .hotspot-feedback.fade-in,
+.h5p-image-hotspot-question .hotspot-feedback-text.fade-in {
   animation-name: fade-in;
   -webkit-animation-name: fade-in;
 

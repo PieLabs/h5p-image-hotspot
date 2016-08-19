@@ -81,7 +81,7 @@
 	    return {};
 	  },
 	  onImageClick: function onImageClick(mouseEvent) {
-	    if (this.props.disabled) {
+	    if (this.props.model.disabled) {
 	      return;
 	    }
 	    var x = mouseEvent.pageX - mouseEvent.currentTarget.offsetLeft;
@@ -107,11 +107,12 @@
 	        _react2.default.createElement(_hotspotFeedback2.default, {
 	          disabled: this.props.model.disabled,
 	          correct: this.props.model.correct,
+	          feedbackPosition: this.state.feedbackPosition }),
+	        _react2.default.createElement(_feedbackContainer2.default, {
+	          correct: this.props.model.correct,
+	          msg: this.props.model.feedback,
 	          feedbackPosition: this.state.feedbackPosition })
-	      ),
-	      _react2.default.createElement(_feedbackContainer2.default, {
-	        correct: this.props.model.correct,
-	        msg: this.props.model.feedback })
+	      )
 	    );
 	  }
 	});
@@ -150,6 +151,7 @@
 	    var _this = this;
 
 	    var classname = 'hotspot-feedback' + (this.props.feedbackPosition ? ' fade-in' : '');
+
 	    if (this.props.disabled) {
 	      classname += ' disabled';
 	    }
@@ -159,12 +161,11 @@
 	    } else if (this.props.correct === false) {
 	      classname += ' incorrect';
 	    }
+
 	    var style = {};
 	    if (this.props.feedbackPosition && this.state.elementSize) {
-	      console.log('elementSize', this.state.elementSize);
 	      var x = this.props.feedbackPosition.x - this.state.elementSize.w / 2;
 	      var y = this.props.feedbackPosition.y - this.state.elementSize.h / 2;
-	      console.log('x and y', x, y);
 	      style = { left: x, top: y };
 	    }
 	    return _react2.default.createElement('div', { ref: function ref(_ref) {
@@ -179,7 +180,7 @@
 /* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	var _react = __webpack_require__(2);
 
@@ -188,15 +189,25 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var FeedbackContainer = _react2.default.createClass({
-	  displayName: "FeedbackContainer",
+	  displayName: 'FeedbackContainer',
 
 	  render: function render() {
+
 	    if (this.props.correct === undefined) {
-	      return _react2.default.createElement("div", null);
+	      return _react2.default.createElement('div', null);
 	    } else {
+	      var style = { left: this.props.feedbackPosition.x, top: this.props.feedbackPosition.y };
+	      var className = 'hotspot-feedback-text fade-in ';
+
+	      if (this.props.correct !== undefined) {
+	        className += this.props.correct ? 'correct' : 'incorrect';
+	      }
+
 	      return _react2.default.createElement(
-	        "div",
-	        { className: "hotspot-feedback-text" },
+	        'div',
+	        {
+	          style: style,
+	          className: className },
 	        this.props.msg
 	      );
 	    }

@@ -7,7 +7,7 @@ var H5pImageHotspot = React.createClass({
     return {};
   },
   onImageClick: function (mouseEvent) {
-    if (this.props.disabled){
+    if (this.props.model.disabled){
       return;
     }
     var x = mouseEvent.pageX - mouseEvent.currentTarget.offsetLeft;
@@ -26,10 +26,11 @@ var H5pImageHotspot = React.createClass({
           disabled={this.props.model.disabled} 
           correct={this.props.model.correct} 
           feedbackPosition={this.state.feedbackPosition}/>
+        <FeedbackContainer 
+          correct={this.props.model.correct} 
+          msg={this.props.model.feedback}
+          feedbackPosition={this.state.feedbackPosition}/>
       </div>
-      <FeedbackContainer 
-        correct={this.props.model.correct} 
-        msg={this.props.model.feedback}/>
     </div>;
   }
 });
