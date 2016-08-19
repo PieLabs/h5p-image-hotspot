@@ -1,0 +1,74 @@
+{
+  "id" : "config",
+  "title" : "Config",
+  "type" : "object",
+  "properties" : {
+    "id" : {
+      "type" : "string",
+      "description" : "the uid of the model"
+    },
+    "component" : {
+      "type" : "object",
+      "description" : "the unique component identifier",
+      "required" : ["name", "version"],
+      "properties" : {
+        "name" : {
+          "type" : "string"
+        },
+        "version" : {
+          "type" : "string"
+        }
+      }
+    },
+    "correctResponse" : {
+      "type" : "object",
+      "description" : "The top left and bottom right coordinates within which the response must sit.",
+      "properties" : {
+        "topLeft" : {
+          "type" : "object",
+          "properties" : {
+            "x" : {
+              "type" : "number"
+            },
+            "y" : {
+              "type" : "number"
+            }
+          }
+        },
+        "bottomRight" : {
+          "type" : "object",
+          "properties" : {
+            "x" : {
+              "type" : "number"
+            },
+            "y" : {
+              "type" : "number"
+            }
+          }
+        }
+      }
+    },
+    "model" : {
+      "properties" : {
+        "stem" : {
+          "type" : "string"
+        },
+        "src" : {
+          "description" : "The url to the image to use",
+          "type" : "string"
+        },
+        "feedback" : {
+          "type" : "object",
+          "properties" : {
+            "correct" : {
+              "type" : "string"
+            },
+            "incorrect" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}
