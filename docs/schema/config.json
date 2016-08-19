@@ -2,6 +2,7 @@
   "id" : "config",
   "title" : "Config",
   "type" : "object",
+  "required" : ["id", "component", "correctResponse", "model"],
   "properties" : {
     "id" : {
       "type" : "string",
@@ -23,6 +24,7 @@
     "correctResponse" : {
       "type" : "object",
       "description" : "The top left and bottom right coordinates within which the response must sit.",
+      "required" : ["topLeft", "bottomRight"],
       "properties" : {
         "topLeft" : {
           "type" : "object",
@@ -49,6 +51,8 @@
       }
     },
     "model" : {
+      "type" : "object",
+      "required" : ["src"],
       "properties" : {
         "stem" : {
           "type" : "string"
